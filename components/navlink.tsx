@@ -3,6 +3,8 @@
 import {useState} from "react";
 import { IoClose,IoMenu } from "react-icons/io5";
 import clsx from "clsx";
+import Link from "next/link";
+
 const Navlink = () => {
   const [open,setOpen ] = useState(false);
   return (
@@ -19,6 +21,63 @@ const Navlink = () => {
           md:space-x-10 md:p-0 md:mt-0 md:border-0 md:bg-white
           ">
             <li>
+              <Link 
+                href="/"
+                className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0">
+                  Home
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/about"
+                className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0">
+                  About
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/room"
+                className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0">
+                  Room
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/contact"
+                className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0">
+                  Contact
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/myreservation"
+                className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0">
+                  My Reservation
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/admin/dashboard"
+                className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0">
+                  Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/admin/room"
+                className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0">
+                  Manage Room
+              </Link>
+            </li>
+            <li 
+              className="pt-2 md:pt-0">
+                <Link 
+                  href="/signin"
+                  className="py-2.5 px-6 bg-orange-400 text-white hover:bg-orange-500 rounded-sm"
+                  >
+                    Sign in
+                </Link>
+              
 
             </li>
           </ul>
