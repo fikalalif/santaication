@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Navlink from './navlink';
 
 const Navbar = () => {
   return (
@@ -9,6 +10,7 @@ const Navbar = () => {
             <Link href="/">
                 <Image src="/santaication_logo.png" alt="logo" width={128} height={49} priority/>
             </Link>
+            <Navlink/>
         </div>
     </div>
   )
