@@ -11,7 +11,7 @@ const Navlink = () => {
     <>
         <button 
             onClick={() => setOpen(!open)}
-            className="inline-flex items-center p-2 justify-center text-sm text-gray-500 rounded-mdmd:hidden hover:bg-gray-100">
+            className="inline-flex items-center p-2 justify-center text-sm text-gray-500 rounded-md md:hidden hover:bg-gray-100">
               {!open ? <IoMenu className="size-8"/> : <IoClose className="size-8"/>}
         </button>
         <div className={clsx("w-full md:block md:w-auto",{
