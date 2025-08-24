@@ -3,18 +3,19 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-white">
       <div className=" max-w-screen-xl mx-auto px-4 w-full py-10 md:py-16">
         <div className="grid md:grid-cols-3 gap-7">
           <div>
-            <Link href="/" className="mb-10 block">
+            <Link href="/" className="mb-8 block">
               <Image
                 src="/santaication_logo.png"
                 alt="alt"
                 width={128}
                 height={49}
+                className=""
               />
-              <p className="text-gray-400">
+              <p className="text-gray-900">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Pariatur eligendi nesciunt error beatae soluta nemo?
               </p>
@@ -24,8 +25,8 @@ const Footer = () => {
           <div>
             <div className="flex gap-20">
               <div className="flex-1 md:flex-none">
-                <h4 className="mb-8 text-xl font-semibold text-white">Links</h4>
-                <ul className="list-item space-y-5 text-gray-400">
+                <h4 className="mb-8 text-xl font-semibold text-black">Links</h4>
+                <ul className="list-item space-y-5 text-gray900">
                   <li>
                     <Link href="/">Home</Link>
                   </li>
@@ -42,8 +43,8 @@ const Footer = () => {
               </div>
 
               <div className="flex-1 md:flex-none">
-                <h4 className="mb-8 text-xl font-semibold text-white">Legal</h4>
-                <ul className="list-item space-y-5 text-gray-400">
+                <h4 className="mb-8 text-xl font-semibold text-black">Legal</h4>
+                <ul className="list-item space-y-5 text-gray-900">
                   <li>
                     <Link href="#">Legal</Link>
                   </li>
@@ -62,18 +63,18 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="mb-8 text-xl font-semibold text-white">
+            <h4 className="mb-8 text-xl font-semibold text-black">
               NewsLetter
             </h4>
-            <p className="text-gray-400">
+            <p className="text-gray-900">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <form action="" className="mt-5">
-              <div className="mb-5">
+              <div className="mb-5 text-black">
                 <input
                   type="text"
                   name="email"
-                  className="w-full p-3 rounded-sm bg-white"
+                  className="w-full p-3 rounded-sm bg-gray-200"
                   placeholder="johndoe@gmail.com"
                 />
               </div>

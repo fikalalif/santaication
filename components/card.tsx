@@ -6,7 +6,7 @@ const Card = () => {
   return (
     <div className="bg-white shadow-lg rounded-sm transition duration-100 hover:shadow-sm">
       <div className="h-[260px] w-auto rounded-t-sm relative">
-        <Image src="/santaication_logo.png" alt="room image" width={384} height={256} className="w-full h-full object-cover rounded-t-sm"/>
+        <Image src="/room.jpg" alt="room image" width={384} height={256} className="w-full h-full object-cover rounded-t-sm"/>
       </div>
       <div className="p-8">
         <h4 className="text-2xl font-medium">
