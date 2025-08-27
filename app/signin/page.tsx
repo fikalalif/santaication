@@ -1,4 +1,4 @@
-import LoginButton from '@/components/login-button'
+import {LoginGoogleButton} from '@/components/login-button'
 import { Metadata } from 'next'
 
 export const metadata:Metadata={
@@ -14,7 +14,7 @@ const SignInPage = () => {
                 Sign In To Your Account
             </p>
             <div className='py-4 text-center'>
-                <LoginButton/>
+                <LoginGoogleButton/>
             </div>
         </div>
     </div>
