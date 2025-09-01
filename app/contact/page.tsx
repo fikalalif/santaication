@@ -1,5 +1,10 @@
 import HeaderSection from "@/components/header-section";
 import { Metadata } from "next";
+import {
+  IoMailOutline,
+  IoCallOutline,
+  IoLocationOutline,
+} from "react-icons/io5";
 
 const metadata: Metadata = {
   title: "Contact Us",
@@ -23,7 +28,39 @@ const ContactPage = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
               nisi molestiae optio saepe! Libero, porro.
             </p>
+            <ul className="list-item space-y6 pt-8">
+              <li className="flex gap-5">
+                <div className="flex-none bg-gray-300 p-3 shadow-sm rounded-sm">
+                  <IoMailOutline className="size-7" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold mb-1">Email : </h4>
+                  <p>email-us@example.com</p>
+                </div>
+              </li>
+              <li className="flex gap-5">
+                <div className="flex-none bg-gray-300 p-3 shadow-sm rounded-sm">
+                  <IoCallOutline className="size-7" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold mb-1">
+                    Phone Number :{" "}
+                  </h4>
+                  <p>+625162561526752</p>
+                </div>
+              </li>
+              <li className="flex gap-5">
+                <div className="flex-none bg-gray-300 p-3 shadow-sm rounded-sm">
+                  <IoLocationOutline className="size-7" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold mb-1">Location : </h4>
+                  <p>jl. penusupan rt 6/8 no 61, pangkah, tegal, indonesia</p>
+                </div>
+              </li>
+            </ul>
           </div>
+          {/* contactform */}
         </div>
       </div>
     </div>
