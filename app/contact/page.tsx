@@ -9,6 +9,7 @@ import {
 const metadata: Metadata = {
   title: "Contact Us",
 };
+import ContactFromPage from "@/components/contact-form";
 
 const ContactPage = () => {
   return (
@@ -61,6 +62,7 @@ const ContactPage = () => {
             </ul>
           </div>
           {/* contactform */}
+          <ContactFromPage/>
         </div>
       </div>
     </div>
