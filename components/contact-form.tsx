@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { ContactMessage } from "@/lib/action";
+import clsx from "clsx";
 
 const ContactFromPage = () => {
   const [state, formAction, isPending] = useActionState(ContactMessage, null);
@@ -72,7 +73,13 @@ const ContactFromPage = () => {
 
         <button
           type="submit"
-          className="px-10 py-4 text-center font-semibold text-white w-full bg-orange-400 rounded-sm hover:bg-orange-500 cursor-pointer"
+          className={clsx(
+            "px-10 py-4 text-center font-semibold text-white w-full bg-orange-400 rounded-sm hover:bg-orange-500 cursor-pointer",
+            {
+              "opacity-50 cursor-progress animate-pulse" : isPending,
+            }
+          )}
+          disabled={isPending}
         >
           {isPending ? "Loading..." : "Send Message"}
         </button>
