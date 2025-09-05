@@ -1,7 +1,7 @@
 "use client";
 
 import { IoCloudUploadOutline, IoTrashOutline } from "react-icons/io5";
-import { useState, useRef, useTransition,useActionState } from "react";
+import { useState, useRef, useTransition, useActionState } from "react";
 import { type PutBlobResult } from "@vercel/blob";
 import Image from "next/image";
 import { BarLoader } from "react-spinners";
@@ -53,7 +53,10 @@ const CreateFrom = ({ amenities }: { amenities: Amenities[] }) => {
     });
   };
 
-  const [state, formAction, isPending] = useActionState(saveRoom.bind(null,image),null);
+  const [state, formAction, isPending] = useActionState(
+    saveRoom.bind(null, image),
+    null
+  );
 
   return (
     <form action={formAction}>
@@ -67,7 +70,9 @@ const CreateFrom = ({ amenities }: { amenities: Amenities[] }) => {
               placeholder="Room Name..."
             />
             <div aria-live="polite" aria-atomic="true">
-              <span className="text-sm text-red-500 mt-2">{state?.error?.name}</span>
+              <span className="text-sm text-red-500 mt-2">
+                {state?.error?.name}
+              </span>
             </div>
           </div>
 
@@ -79,7 +84,9 @@ const CreateFrom = ({ amenities }: { amenities: Amenities[] }) => {
               placeholder="Description"
             ></textarea>
             <div aria-live="polite" aria-atomic="true">
-              <span className="text-sm text-red-500 mt-2">{state?.error?.description}</span>
+              <span className="text-sm text-red-500 mt-2">
+                {state?.error?.description}
+              </span>
             </div>
           </div>
 
@@ -99,7 +106,9 @@ const CreateFrom = ({ amenities }: { amenities: Amenities[] }) => {
             ))}
 
             <div aria-live="polite" aria-atomic="true">
-              <span className="text-sm text-red-500 mt-2">{state?.error?.amenities}</span>
+              <span className="text-sm text-red-500 mt-2">
+                {state?.error?.amenities}
+              </span>
             </div>
           </div>
         </div>
@@ -164,7 +173,9 @@ const CreateFrom = ({ amenities }: { amenities: Amenities[] }) => {
               placeholder="Capacity..."
             />
             <div aria-live="polite" aria-atomic="true">
-              <span className="text-sm text-red-500 mt-2">{state?.error?.capacity}</span>
+              <span className="text-sm text-red-500 mt-2">
+                {state?.error?.capacity}
+              </span>
             </div>
           </div>
 
@@ -176,28 +187,32 @@ const CreateFrom = ({ amenities }: { amenities: Amenities[] }) => {
               placeholder="Price..."
             />
             <div aria-live="polite" aria-atomic="true">
-              <span className="text-sm text-red-500 mt-2">{state?.error?.price}</span>
+              <span className="text-sm text-red-500 mt-2">
+                {state?.error?.price}
+              </span>
             </div>
           </div>
 
           {/* General Message */}
-          {state?.message? (
+          {state?.message ? (
             <div className="mb-2 bg-red-200 mt-2">
-              <span className="text-sm text-gray-700 mt-2">{state.message}</span>
+              <span className="text-sm text-gray-700 mt-2">
+                {state.message}
+              </span>
             </div>
-          ): null}
+          ) : null}
 
           <button
             type="submit"
             className={clsx(
               "bg-orange-400 text-white w-full hover:bg-orange-500 py-2.5 px-6 md:px-10 text-lg font-semibold cursor-pointer",
               {
-                "opacity-50 cursor-progress": isPending
+                "opacity-50 cursor-progress": isPending,
               }
             )}
             disabled={isPending}
           >
-            {isPending ? "Saving ...":"Save"}
+            {isPending ? "Saving ..." : "Save"}
           </button>
         </div>
       </div>
