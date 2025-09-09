@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 const RoomPage = () => {
   return (
-    <div className="max-w-screen-xl px-4 py-16 mt-10 mx-auto">
+    <div className="max-w-screen-xl px-4 py-16 mt-20 mx-auto ">
       <div className="flex items-center justify-between">
         <h1 className="text-4xl text-gray-800 font-bold">Room List</h1>
         <Link

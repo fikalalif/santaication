@@ -1,11 +1,11 @@
 import { prisma } from "./prisma";
 import { auth } from "@/auth";
 
-export const getAmenities = async() => {
+export const getAmenities = async () => {
 
     const session = await auth();
 
-    if(!session || !session.user){
+    if (!session || !session.user) {
         throw new Error(" Unauthorized Access")
     }
 
@@ -16,4 +16,17 @@ export const getAmenities = async() => {
         console.log(error);
     }
 
- };
+};
+
+export const getRoom = async () => {
+
+    try {
+        const result = await prisma.room.findMany({
+            orderBy: { createdAt: "desc" }
+        });
+        return result
+    } catch (error) {
+        console.log(error);
+    }
+
+};
