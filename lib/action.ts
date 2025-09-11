@@ -29,6 +29,7 @@ export const saveRoom = async (image: string, prevState: unknown, formData: Form
                 description,
                 price,
                 capacity,
+                image,
                 RoomAmenities:{
                     createMany:{
                         data: amenities.map((item)=>({
