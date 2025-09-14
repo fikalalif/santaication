@@ -1,6 +1,6 @@
 import { getRoom } from "@/lib/data";
 import Image from "next/image";
-import { formatDate,formatCurrency } from "@/lib/utils";
+import { formatDate, formatCurrency } from "@/lib/utils";
 import { DeleteButton, EditButton } from "./button";
 
 const RoomTable = async () => {
@@ -45,10 +45,14 @@ const RoomTable = async () => {
               </td>
               <td className="px-6 py-4">{room.name}</td>
               <td className="px-6 py-4">{formatCurrency(room.price)}</td>
-              <td className="px-6 py-4">{formatDate(room.createdAt.toString())}</td>
+              <td className="px-6 py-4">
+                {formatDate(room.createdAt.toString())}
+              </td>
               <td className="px-6 py-4 text-right">
-                <DeleteButton id={room.id} image={room.image}/>
-                <EditButton id={room.id}/>
+                <div className="flex items-center justify-center gap-1">
+                  <EditButton id={room.id} />
+                  <DeleteButton id={room.id} image={room.image} />
+                </div>
               </td>
             </tr>
           ))}
