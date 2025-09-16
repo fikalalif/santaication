@@ -11,7 +11,7 @@ export const metadata: Metadata ={
 const RoomPage = () => {
   return (
     <div>
-        <HeaderSection title="Room & Rates" subTitle="Lorem ipsum dolor sit amet"/>
+        <HeaderSection title="Room & Rates." subTitle="Lorem ipsum dolor sit amet"/>
         <div className="mt-10 px-4">
             <Suspense fallback={<p className="">Loading ...</p>}>
                 <Main/>
