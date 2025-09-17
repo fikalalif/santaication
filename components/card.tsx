@@ -43,7 +43,7 @@ const Card = ({ room }: { room: Room }) => {
             className="px-6 py-2.5 md:px-10 md:py-3 font-semibold text-white bg-orange-400 rounded-sm hover:bg-orange-500
           transition duration-150"
           >
-            Book Now
+            Book Now.
           </Link>
         </div>
       </div>
