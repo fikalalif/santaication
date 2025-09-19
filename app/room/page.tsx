@@ -1,5 +1,6 @@
 import HeaderSection from "@/components/header-section"
 import Main from "@/components/main"
+import RoomSkeleton from "@/components/skeletons/room-skeleton"
 import { Metadata } from "next"
 import { Suspense } from "react"
 
@@ -13,7 +14,7 @@ const RoomPage = () => {
     <div>
         <HeaderSection title="Room & Rates." subTitle="Lorem ipsum dolor sit amet"/>
         <div className="mt-10 px-4">
-            <Suspense fallback={<p className="">Loading ...</p>}>
+            <Suspense fallback={<RoomSkeleton/>}>
                 <Main/>
             </Suspense>
         </div>
