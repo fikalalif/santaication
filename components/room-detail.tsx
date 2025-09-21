@@ -18,7 +18,7 @@ const RoomDetail = async ({ roomId }: { roomId: string }) => {
         />
         <h1 className="text-5xl font-semibold text-gray-900 mb-8">{room.name}</h1>
         <p>{room.description}</p>
-        <h5 className="text-lg font-bold py-1 mt-1">Amenities : </h5>
+        <h5 className="text-lg font-bold py-1 mt-1">Amenities: </h5>
         
       </div>
       <div className="md:col-end-4"></div>
