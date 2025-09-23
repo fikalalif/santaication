@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getRoomDetailByid } from "@/lib/data";
 import { notFound } from "next/navigation";
+import { IoCheckmark, IoPeopleOutline } from "react-icons/io5";
+import { formatCurrency } from "@/lib/utils";
 
 const RoomDetail = async ({ roomId }: { roomId: string }) => {
   const room = await getRoomDetailByid(roomId);
@@ -16,12 +18,42 @@ const RoomDetail = async ({ roomId }: { roomId: string }) => {
           priority
           className="w-full rounded-sm mb-8"
         />
-        <h1 className="text-5xl font-semibold text-gray-900 mb-8">{room.name}</h1>
+        <h1 className="text-5xl font-semibold text-gray-900 mb-8">
+          {room.name}
+        </h1>
         <p>{room.description}</p>
         <h5 className="text-lg font-bold py-1 mt-1">Amenities : </h5>
-        
+        <div className="grid md:grid-cols-3">
+          {room.RoomAmenities.map((item) => (
+            // eslint-disable-next-line react/jsx-key
+            <div className="flex gap-1 py-1">
+              <IoCheckmark className="size-5" />
+              <span>{item.Amenities.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="md:col-end-4"></div>
+      <div className="md:col-end-4">
+        <div className="border-2 border-gray-300 border-dashed px-3 py-5 bg-slate-50 rounded-">
+          <div className="flex items-center justify-baseline mb-8">
+            <div className="flex items-center space-x-2">
+              <IoPeopleOutline className="size-4"/>
+              <span>
+                {room.capacity} {room.capacity === 1 ? "person" : "people"}
+              </span>
+            </div>
+
+            <div className="flex items-center">
+              <span className="text-2xl font-semibold text-gray-600">{formatCurrency(room.price)}</span>
+              <span className="text-gray-500 text-sm">/Night</span>
+            </div>
+
+          </div>
+          {/* reservation form */}
+
+          
+        </div>
+      </div>
     </div>
   );
 };
