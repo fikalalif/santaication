@@ -45,7 +45,7 @@ const RoomDetail = async ({ roomId }: { roomId: string }) => {
 
             <div className="flex items-center">
               <span className="text-2xl font-semibold text-gray-600">{formatCurrency(room.price)}</span>
-              <span className="text-gray-500 text-sm">/Night</span>
+              <span className="text-gray-500 text-sm">/Malam</span>
             </div>
 
           </div>
