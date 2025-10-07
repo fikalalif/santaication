@@ -10,10 +10,10 @@ export type RoomDetailProps = Prisma.RoomGetPayload<{
             include: {
                 Amenities: {
                     select: {
-                        name: true,
-                    },
-                },
-            },
-        },
-    },
-}>
+                        name: true;
+                    };
+                };
+            };
+        };
+    };
+}>;

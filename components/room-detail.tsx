@@ -26,7 +26,7 @@ const RoomDetail = async ({ roomId }: { roomId: string }) => {
         <div className="grid md:grid-cols-3">
           {room.RoomAmenities.map((item) => (
             // eslint-disable-next-line react/jsx-key
-            <div className="flex gap-1 py-1">
+            <div className="flex gap-1 py-1" key={item.id}>
               <IoCheckmark className="size-5" />
               <span>{item.Amenities.name}</span>
             </div>
@@ -36,7 +36,7 @@ const RoomDetail = async ({ roomId }: { roomId: string }) => {
       <div className="md:col-end-4">
         <div className="border-2 border-gray-300 border-dashed px-3 py-5 bg-slate-50 rounded-">
           <div className="flex items-center justify-baseline mb-8">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2" key={room.id}>
               <IoPeopleOutline className="size-4"/>
               <span>
                 {room.capacity} {room.capacity === 1 ? "person" : "people"}
